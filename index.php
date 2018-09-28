@@ -5,7 +5,8 @@
         <title>Frente de Caixa</title>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+        <link href="css/typeaheadjs.css" rel="stylesheet" type="text/css"/>
+        
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.js" type="text/javascript"></script>
         <script src="js/pdv.js" type="text/javascript"></script>
@@ -28,6 +29,10 @@
                 text-align: left;
                 font-weight: bold;
             }
+            
+            .btn-acoes{
+                margin-top: 20px;
+            }
 
         </style>   
 
@@ -40,7 +45,7 @@
                 <div class="col-6">
 
                     <div class="card text-center" id="card-produtos">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: #6c757d">
                             CUPOM FISCAL
                         </div>
                         <div class="card-body">
@@ -77,10 +82,12 @@
                         </div>
                     </div>
 
+                    <div class="btn-acoes">
                     <button type="button" class="btn btn-warning">Estorno</button>
                     <button type="button" class="btn btn-success">Pagar</button>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-cancelar">Cancelar</button>
-
+                    </div>
+                    
                 </div>
 
 
@@ -123,7 +130,7 @@
                         "Você deseja realmente cancelar a venda?"
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Sim</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn-cancelar-sim">Sim</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
                     </div>
                 </div>

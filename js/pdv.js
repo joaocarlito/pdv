@@ -31,8 +31,18 @@
         },
                 {
                     name: 'produtos',
-                    source: pesquisaProduto
+                    source: pesquisaProduto,
+                    display: 'nome'
                 });
+                
+                
+          // evento quando seleciona produto      
+         $("#input-produto").bind('typeahead:select', function(ev, valor){
+             addProduto(valor);
+         }); // fim do select
+         
+         
+         
 
         //add cod. barras
         $("#btn-codbarras").click(function () {
@@ -48,15 +58,25 @@
                 $('#modal-codBarras').modal('show')
             } else
             {
-                var html = '<li>' + res.nome + '------ R$ ' + res.preco + '</li>';
-                $("#card-produtos ol").append(html); //append adiciona na ultima posição.
-                valorTotal += res.preco;
-
-                $("#input-codbarras").val('');
-                $("#card-totalpagar .valor").html(formataReais(valorTotal));
+                addProduto(res);
             }
 
         }); // fim do Click
+        
+        function addProduto(produto){
+            
+            var html = '<li>' + produto.nome + ' ------ ' + formataReais(produto.preco) + '</li>';
+                $("#card-produtos ol").append(html); //append adiciona na ultima posição.
+                valorTotal += produto.preco;
+
+                $("#input-codbarras").val('');
+                $("#input-produto").typeahead('val' , '');
+                $("#card-totalpagar .valor").html(formataReais(valorTotal));
+        }
+        
+        $("#btn-cancelar-sim").click(function(){
+            window.location.reload();
+        }); // fim do click
 
     })]; // fim document ready
 
