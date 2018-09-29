@@ -84,7 +84,7 @@
 
                     <div class="btn-acoes">
                     <button type="button" class="btn btn-warning">Estorno</button>
-                    <button type="button" class="btn btn-success">Pagar</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-pagar" >Pagar</button>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-cancelar">Cancelar</button>
                     </div>
                     
@@ -138,6 +138,27 @@
         </div>
 
         
+        <!-- Modal -->
+        <div class="modal fade" id="modal-pagar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <i class="fa fa-exclamation-triangle text-warning" style="font-size: 28pt;"></i>
+                        "Você deseja realmente concluir a venda?"
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn-pagar-sim">Sim</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
 
     </body>
