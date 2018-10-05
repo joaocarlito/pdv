@@ -1,36 +1,26 @@
 [
 {
-    "id": 123456, 
-    "nome": "Brahma Litrao", 
-    "preco": 3.50,
-    "quantidade": 10
+    "id": 123456,
+    "nome": "coca-cola lata",
+    "preco": 3.5,
+    "quantidade": 20
 },
-
 {
-    "id": 456789, 
-    "nome": "Sprite Lata", 
-    "preco": 4.10,
-    "quantidade": 2
+    "id": 123455,
+    "nome": "coca-cola 600ml",
+    "preco": 5.8,
+    "quantidade": 20
 },
-
 {
-    "id": 147852, 
-    "nome": "Pizza Calabresa", 
-    "preco": 23.50,
-    "quantidade": 32
+    "id": 321321,
+    "nome": "X-Tudo",
+    "preco": 11.80,
+    "quantidade": 20
 },
-
 {
-    "id": 369852, 
-    "nome": "Chocolate Lacta", 
-    "preco": 1.20,
-    "quantidade": 7
-},
-
-{
-    "id": 951753, 
-    "nome": "Whisky Jack Daniels", 
-    "preco": 153.50,
-    "quantidade": 12
+    "id": 321123,
+    "nome": "X-Salada",
+    "preco": 8.50,
+    "quantidade": 20
 }
 ]
